@@ -1,0 +1,4 @@
+const VERIFICATION = {
+    VERIFIED : 1,
+    NOT_VERIFIED: 0
+}
