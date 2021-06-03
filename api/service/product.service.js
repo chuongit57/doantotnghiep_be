@@ -28,7 +28,8 @@ const add = async(product, fileImage) => {
             product.status = 1;
             if (fileImage) {
                 product.image = await uploadProductImage(product.product_code, fileImage)
-                product.image = 'http://localhost:3000/' + product.image;
+                // product.image = 'http://localhost:3000/' + product.image;
+                product.image = 'https://stormy-spire-34426.herokuapp.com/' + product.image;
             }
             product = await productModel.add(product);
             if (product && product.id) {
@@ -78,7 +79,8 @@ const update = async(product, fileImage) => {
 
             if (fileImage) {
                 product.image = await uploadProductImage(productOld.product_code, fileImage);
-                product.image = 'http://localhost:3000/' + product.image;
+                // product.image = 'http://localhost:3000/' + product.image;
+                product.image = 'https://stormy-spire-34426.herokuapp.com/' + product.image;
             }
             product = await productModel.update(productOld.id, product);
             if (product && product.id) {
@@ -133,7 +135,8 @@ const removeImage = async(file) => {
 }
 
 const remove = async(id, path) => {
-    path = path.split('http://localhost:3000/')[1]
+    // path = path.split('http://localhost:3000/')[1]
+    path = path.split('https://stormy-spire-34426.herokuapp.com/')[1]
     let isRemove = await productModel.remove(id);
     if (isRemove) {
         await fs.unlink(path, function(err) {
