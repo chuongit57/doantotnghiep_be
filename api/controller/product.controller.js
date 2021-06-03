@@ -47,7 +47,7 @@ module.exports = class {
             productAdd.product_code = params.productCode;
             productAdd.product_name = params.productName;
             productAdd.description = params.description;
-            productAdd.quantity = params.quantity;
+            productAdd.price = params.price;
             productAdd.image = '';
             productAdd = await productService.add(productAdd, req.file).catch(e => errorCatch = e);
 
@@ -90,7 +90,7 @@ module.exports = class {
             productAdd.category_id = params.categoryId
             productAdd.product_name = params.productName;
             productAdd.description = params.description;
-            productAdd.quantity = params.quantity;
+            productAdd.price = params.price;
             productAdd = await productService.update(productAdd, req.file).catch(e => errorCatch = e);
 
             if (errorCatch) {

@@ -14,7 +14,7 @@ module.exports = {
             product_id: {
                 type: Sequelize.STRING
             },
-            quantity: {
+            price: {
                 type: Sequelize.STRING
             },
             amount: {

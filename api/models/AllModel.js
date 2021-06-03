@@ -114,7 +114,7 @@ module.exports = class AllModel {
             image: Sequelize.STRING,
             description: Sequelize.STRING,
             category_id: Sequelize.INTEGER,
-            quantity: Sequelize.INTEGER,
+            price: Sequelize.INTEGER,
             status: Sequelize.INTEGER,
             created_at: {
                 field: 'created_at',

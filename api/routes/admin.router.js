@@ -60,7 +60,7 @@ module.exports = () => {
                 .required(),
             categoryId: Joi.number()
                 .required(),
-            quantity: Joi.number(),
+            price: Joi.number(),
             description: Joi.string()
         }),
     }
