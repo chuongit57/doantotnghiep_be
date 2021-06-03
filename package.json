@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
 	"main": "index.js",
+	"engines": {
+		"node": "14.15.5"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon server.js",
